@@ -6,8 +6,6 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.support.rastermill.FrameSequenceDrawable;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -16,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final ImageView imageView = findViewById(R.id.image);
-
         String gifUrl = "https://www.verdict.co.uk/wp-content/uploads/2017/09/giphy-downsized-large.gif";
-        GlideApp.with(this).as(FrameSequenceDrawable.class).load(gifUrl).into(imageView);
+//        String gifUrl = "https://template.3dnest.cn/resources/loading/20200803152120_company_loading.gif";
+        GlideApp.with(this).asSupportGift().load(gifUrl).into(imageView);
     }
 }
